@@ -1,0 +1,15 @@
+$primary : purple;
+$warning : brown;
+$secondary : pink;
+
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+
+$el-theme-colors: (
+  "cool" : pink,
+  "veryCool" : cyan
+);
+
+$theme-colors : map-merge($el-theme-colors , $theme-colors );
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
