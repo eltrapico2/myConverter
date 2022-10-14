@@ -23,7 +23,7 @@ const convertFtoC = function() {
     };
 };
 
-const convertCtoF = function() {
+/*const convertCtoF = function() {
   let a = document.getElementById('inputFahrenheit').value;
 
     if (a != "") {
@@ -39,7 +39,7 @@ const convertCtoF = function() {
     else {
       document.getElementById('inputCelcius').value = "";
     };
-};
+};*/
 
 /*end original*/
 
