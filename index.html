@@ -10,42 +10,90 @@
 </head>
   <body>
     <center>
-    <div class="bg-primary mt-5 rounded-4" style="width: 300px; height: 400px">
-      <br>
-      <h2 class="fw-bold" style="color: lightgreen;">My Converter</h2>
+      <!--start original-->
+      <div class="bg-primary mt-5 rounded-4" style="width: 300px; height: 400px">
+
+        <br>
+
+       <h2 class="fw-bold" style="color: lightgreen;">My Converter</h2>
+        
         <br>
       
-      <div class="container">
+        <div class="container">
+          <div>
+            <label for="labelFahrenheit" class="form-label fw-bold">Fahrenheit:</label>
+          </div>
         <div>
-          <label for="inputFahrenheit" class="form-label fw-bold">Fahrenheit:</label>
+          <input class="rounded-2 text-center fw-bold"  style="height:50px;" type="number" name="inputFahrenheit" id="inputFahrenheit" required>
         </div>
-      <div>
-        <input class="rounded-2"  style="height:50px;" type="text" name="inputFahrenheit" id="inputFahrenheit">
-      </div>
-        
-      </div>
-      <br>
-      <div class="container-fluid">
-        <div>
-          <label for="inputCelcius" class="form-label fw-bold">Celcius:</label>
-        </div>
-        <div>
-           <input class="rounded-2" style="height:50px;" type="text" name="inputCelcius" id="inputCelcius">
-        </div>
-       
-      </div>
-      <br>
-      <div class="d-flex justify-content-center">
-        <div>
-        <label type="text" value="Fahrenheit:"></label>
-        <button class="btn btn-success fs-4 me-2" type="button" id="btn1">Convert</button>
-
-        <button class="btn btn-warning fs-5 ms-1"ype="button" id="btn2">Clear</button>
-      </div>
-      </div>
-      
-    </div>
-    </center>
     
+        <br>
+
+        <div class="container-fluid">
+          <div>
+            <label for="labelCelcius" class="form-label fw-bold">Celcius:</label>
+          </div>
+          <div>
+           <input class="rounded-2 text-center bg-light fw-bold" style="height:50px;" type="number" name="inputCelcius" id="inputCelcius" disabled>
+          </div>
+        </div>
+
+        <br>
+
+        <div class="d-flex justify-content-center">
+          <div>
+            <button class="btn btn-success fs-5 me-2" type="button" id="btnConvert" onclick="document.getElementById('inputCelcius').value = (convertFtoC());">Convert</button>
+
+            <button class="btn btn-warning fs-5 ms-2" type="button" id="btnClear" onclick="(functionClear());">Clear</button>
+          </div>
+        </div>
+      </div>
+      <!--end original-->
+
+      <!--start revision1>
+      <div class="bg-primary mt-5 rounded-4" style="width: 300px; height: 500px">
+        <br>
+        <h2 class="fw-bold" style="color: lightgreen;">My Converter</h2>
+        <br>
+        <div class="container">
+          <div class="form-floating" style="width:220px; height:70px">
+            <select class="form-select" id="inputFloatingSelectGrid">
+              <option selected>Open this select menu</option>
+              <option value="1">Celcius</option>
+              <option value="2">Fahrenheit</option>
+            </select>
+            <label for="inputFloatingSelectGrid">Select Temp.</label>
+          </div>
+          <div>
+            <input class="rounded-2 text-center fw-bold"  style="height:50px;" type="number" name="inputField" id="inputField" required>
+          </div>
+        </div>
+        <br>
+        <div class="container-fluid">
+          <div class="form-floating" style="width:220px; height:70px">
+            <select class="form-select" id="ouputFloatingSelectGrid">
+              <option selected>Open this select menu</option>
+              <option value="1">Celcius</option>
+              <option value="2">Fahrenheit</option>
+            </select>
+            <label for="outputFloatingSelectGrid">Select Temp.</label>
+          </div>
+          <div>
+           <input class="rounded-2 text-center bg-light fw-bold" style="height:50px;" type="number" name="outputField" id="outputField" disabled>
+          </div>
+        </div>
+        <br><br>
+        <div class="d-flex justify-content-center">
+          <div>
+            <button class="btn btn-success fs-5 me-2" type="button" id="btnConvert" onclick="document.getElementById('outputField').value = (functionConvert());">Convert</button>
+            <button class="btn btn-warning fs-5 ms-2" type="button" id="btnClear" onclick="(functionClear());">Clear</button>
+          </div>
+        </div>
+      </div>
+      <!--end revision1-->
+    </center>
+
+    <script src="main.js"></script>
+
   </body>
 </html>
